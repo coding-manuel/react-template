@@ -4,9 +4,9 @@ I use [degit](https://github.com/Rich-Harris/degit) to scaffold the projects.
 
 ## How to use
 ``` 
-$ degit coding-manuel/react-template 
-$ mv react-template project-name
+$ mkdir project-name
 $ cd project-name 
+$ degit coding-manuel/react-template 
 $ npm i 
 ```
 
@@ -23,5 +23,9 @@ $ npm i
 
 # TODO
 - [ ] Add Font Link in index.html
+- [ ] Change Title in index.html
 - [ ] Add dark and light (optional) Favicon to assets folder
-- [ ] Change Title
+- [ ] Add Additional Libraries
+
+## Further Additions
+- Different branches with different Templates (full-stack, web3, etc)
