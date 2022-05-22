@@ -2,6 +2,15 @@ A Template holding repo for myself to initialize my project scaffolding fast.
 
 I use [degit](https://github.com/Rich-Harris/degit) to scaffold the projects.
 
+## How to use
+``` 
+$ degit coding-manuel/react-template 
+$ mv react-template project-name
+$ cd project-name 
+$ npm i 
+```
+
+
 ## Libraries included in Base
 - [vite](https://vitejs.dev/)
 - [react-router](https://github.com/remix-run/react-router)
