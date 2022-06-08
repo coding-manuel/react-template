@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { createStyles, Menu, Header, Container, Group, Avatar, useMantineColorScheme, Switch } from '@mantine/core';
+import { createStyles, Menu, Header, Container, Group, Avatar, useMantineColorScheme, Switch, Text } from '@mantine/core';
 
 const HEADER_HEIGHT = 60;
 
@@ -58,12 +58,12 @@ export default function Navbar() {
 
   return (
     <Header fixed height={HEADER_HEIGHT} className={classes.root}>
-      <Container size='lg' className={classes.header}>
+      <Container size='xl' className={classes.header}>
         <img onClick={handleLogoClick} style={{height: 30, cursor: "pointer"}} src='https://www.pngfind.com/pngs/m/115-1159599_jeep-uk-twitter-jeep-logo-transparent-background-hd.png' alt="" />
         <Group spacing={24}>
           <Menu placement='end' closeOnItemClick={false} control={<Avatar sx={{cursor: "pointer"}} size='sm' />} styles={{itemLabel: {width: '100%'}}}>
             {/* <Menu.Item component={Link} to={`/artist/${currentAccount}`} icon={<User size={16} weight="regular" />}>Your Profile</Menu.Item> */}
-            <Menu.Item ><Switch checked={checked} onChange={handleToggle} styles={{root:{flexDirection: 'row-reverse', justifyContent: 'space-between', width: '100%'}, label:{paddingLeft: 0, paddingRight: 8}}} label="Dark Mode" /></Menu.Item>
+            <Menu.Item ><Switch checked={checked} onChange={handleToggle} styles={{root:{flexDirection: 'row-reverse', justifyContent: 'space-between', width: '100%'}, label:{paddingLeft: 0, paddingRight: 8}}} label={<Text variant='xs'>Dark Mode</Text>} /></Menu.Item>
           </Menu>
         </Group>
       </Container>
