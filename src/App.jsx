@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { MantineProvider, ColorSchemeProvider } from '@mantine/core';
+import { MantineProvider, ColorSchemeProvider, GlobalStyles } from '@mantine/core';
 import { useLocalStorage } from '@mantine/hooks';
 
 import Home from './pages/Home';
@@ -19,6 +19,8 @@ function App() {
     primaryColor: 'red',
     primaryShade: 8,
 
+    fontFamily: 'Sora, sans-serif',
+
     lineHeight: 1.3,
     headings: {
       fontFamily: 'Sora, sans-serif',
@@ -35,7 +37,7 @@ function App() {
 
   return (
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-      <MantineProvider theme={theme} styles={{ Title: { root: { color: "#ffffff"} } }} withGlobalStyles withNormalizeCSS>
+      <MantineProvider theme={theme} styles={GlobalStyles} withGlobalStyles withNormalizeCSS>
         <Layout>
           <Routes>
             <Route path='home' element={<Home />} />
